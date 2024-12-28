@@ -1,0 +1,7 @@
+--- joining employee data and engagement_survey_data 
+select * from employee_data
+select * from employee_engagement_survey_data
+
+select a.firstname, a.Lastname, b.[Satisfaction Score], b.[Work-Life Balance Score],a.Supervisor, a.[Performance Score] from employee_data as a join employee_engagement_survey_data as b on a.empID=b.[Employee ID]  
+select a.firstname, a.Lastname, b.[Satisfaction Score] from employee_data as a left join employee_engagement_survey_data as b on a.empID=b.[Employee ID]
+
